@@ -15,4 +15,3 @@ def run():
         else:
             print('Nothing urgent atm')
         time.sleep(interval)
-
