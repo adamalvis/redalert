@@ -12,5 +12,7 @@ def run():
         if len(unread_messages) > 0:
             alert_service = AlertService(unread_messages)
             alert_service.push()
+        else:
+            print('Nothing urgent atm')
         time.sleep(interval)
 
