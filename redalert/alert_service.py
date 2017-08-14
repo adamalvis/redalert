@@ -10,5 +10,5 @@ class AlertService(object):
     def push(self):
         for subject in self.email_subjects:
             os.system("""
-              osascript -e 'display notification "{}" with title "{}" sound name "Blow.aiff"'
+              osascript -e 'display notification "{}" with title "{}" sound name "launch.mp3"'
               """.format(subject, self.alert_title))
