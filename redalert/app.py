@@ -1,3 +1,4 @@
+import sys
 import time
 
 from alert_service import AlertService
@@ -5,7 +6,8 @@ from outlook_service import OutlookService
 
 
 def run():
-    interval = 60 * 15 # 15 minutes
+    minutes = float(sys.argv[1]) if len(sys.argv) > 1 else 15
+    interval = 60 * minutes # 15 minutes
     while True:
         outlook_service = OutlookService()
         unread_messages = outlook_service.get_priority_messages()
